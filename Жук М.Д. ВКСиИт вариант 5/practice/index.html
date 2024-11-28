@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отопительное оборудование</title>
+    <link rel="stylesheet" href="../practice/css/style.css">
+    <link rel="script" href="../practice/script.js">
+    <link rel="icon" type="image/png" href="../practice/img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..90">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+</head>
+
+<body>
+
+    <!-- модальные окна -->
+    <div class="modal_backcall" id="modal_backcall">
+        <form class="modal_backcall_form" action="">
+            <h2>Заказать обратный звонок</h2>
+            <label for="name">Имя</label>
+            <input type="text" name="name">
+            <label for="phone_number">Номер телефона*</label>
+            <input type="text" name="phone_number" placeholder="+7 (___)___-__-__">
+            <span>*Нажимая на кнопку, Вы соглашаетесь <span class="form_under">на обработку персональных данных</span></span>
+            <a data-fancybox href="#modal_backcall_sucsess" href="javascript:;" onclick="$.fancybox.close();"><button type="submit">Отправить</button></a>
+        </form>
+
+        <div class="modal_backcall_sucsess" id="modal_backcall_sucsess">
+            <h2>Успешно отправлено!</h2>
+            <span>Наш специалист перезвонит Вам на указанный номер в течение 15 минут.</span>
+            <a href="javascript:;" onclick="$.fancybox.close();"><button class="close_btn">Закрыть</button></a>
+        </div>
+
+    </div>    
+    
+    <div class="modal_order" id="modal_order">
+        <h2>Оформить заявку</h2>
+        <form action="">
+            <label for="name">Имя</label>
+            <input type="text" name="name">
+            <label for="phone_number">Номер телефона*</label>
+            <input type="text" name="phone_number" placeholder="+7 (___)___-__-__">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" placeholder="example@gmail.com">
+            <span>*Нажимая на кнопку, Вы соглашаетесь <span class="form_under">на обработку персональных данных</span></span>
+            <a data-fancybox href="#modal_order_sucsess" href="javascript:;" onclick="$.fancybox.close();"><button type="submit">Отправить</button></a>
+        </form>
+
+        <div class="modal_order_sucsess" id="modal_order_sucsess">
+            <h2>Успешно отправлено!</h2>
+            <span>Мы уже получили заявку — наш специалист свяжется с Вами в течение 15 минут для подтверждения.</span>
+            <a href="javascript:;" onclick="$.fancybox.close();" class="close"><button class="close_btn">Закрыть</button></a>
+        </div>
+
+    </div>
+
+
+    <!-- шапка сайта -->
+    <header>
+
+        
+        <img class="logo" src="../practice/img/logo.svg" alt="">
+        
+        <div class="menu">
+            <nav class="navigation">
+
+                <ul><a class="punkt_menu" href="#vygoda">Выгодно</a></ul>
+                <ul><a class="punkt_menu" href="#goods">Услуги и Товары</a></ul>
+                <ul><a class="punkt_menu" href="#contacts">Контакты</a></ul>
+                <ul><a class="punkt_menu" href="#more">Еще <img class="downarrowmore" src="../practice/img/arwdwn.svg" alt=""></a></ul>
+                
+            </nav>    
+        
+        <img class = "social" src="../practice/img/social.svg" alt="">
+        <img class = "divider" src="../practice/img/divider.svg" alt="">
+
+        <span class="number">+7 (999) 123-45-67</span>
+        </div>
+
+        <a data-fancybox href="#modal_backcall"><button class="backcall">Обратный звонок</button></a>
+
+    </header>
+
+
+    <main>
+
+        <!-- установка и обслуживание отопительного оборудования -->
+        <section id="deploying_block">
+        <div class="deploying">
+
+            <div class="deploying_text">
+                <h1 class="deploying_text_zagolovok">Установка и обслуживание <span class="blue_words">отопительного оборудования</span> в Москве</h1>
+
+                    <div class="qualities">
+                        <span class="quality">Профессионализм</span>
+                        <span class="quality">Честность</span>
+                        <span class="quality">Открытость</span>
+                        <span class="quality">Инновационность</span>
+                    </div>
+
+                    <div class="deploying_buttons">
+
+                        <a data-fancybox href="#modal_order"><button class="makecall">Оставить заявку</button></a>
+                        
+                        <div class="deploying_slider_buttons">
+
+                        <img src="../practice/img/arrowleft.svg" alt="">
+                        <img src="../practice/img/circleslider.svg" alt="">
+                        <img src="../practice/img/circleslider.svg" alt="">
+                        <img src="../practice/img/circleslider.svg" alt="">
+                        <img src="../practice/img/arrowright.svg" alt="">
+
+                        </div>
+
+                    </div>
+
+            </div>
+
+            <div class="deploying_img"></div>
+
+        </div>
+        </section>
+
+
+        <!-- скидка на первый заказ -->
+        <section id="vygoda">
+
+        <div class="discount">
+
+            <div class="discount_text">
+                	<span class="zag_discount">Скидка на первый заказ!</span> <br>
+                    <div class="txt_discount">Дарим скидку 10% на первый заказ <br> через сайт</div> <br>
+                    <a data-fancybox href="#modal_order"><button class="order">Заказать услугу</button></a>
+            </div>
+            
+        </div>
+
+
+        </section>
+
+        <!-- товары и услуги -->
+        <section id="goods">
+            <h2 class="zag_goods"><span class="zag_goods_blue">Услуги и товары</span> нашей компании</h2>
+            <div class="goods_cards">
+                <div class="small_cards_row" style="margin-top: 0;">
+                    <div class="card">
+                        <div class="card_column1">
+                        <h3 class="zag_card">Проектирование, монтаж,<br> сервисное обслуживание систем<br> отопления и водоснабжения</h3>
+                        <nav class="marked_list">
+                            <li>Проектирование</li>
+                            <li>Монтаж</li>
+                            <li>Сервисное обслуживание</li>
+                            <li>Любой масштаб</li>
+                        </nav>
+                        <a class="ref_order_bordered" data-fancybox href="#modal_order"><button class="order_bordered">Заказать услугу</button></a>
+                        </div>
+                        <div class="card_column2">
+                            <span class="cost">от 50 000 руб</span>
+                            <img class="card_img" src="../practice/img/card1img.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card_column1">
+                            <h3 class="zag_card">Установка<br> автоматики</h3>
+                            <nav class="marked_list">
+                                <li>Для систем водоснабжения</li>
+                                <li>Для отопления</li>
+                                <li>Для систем водоснабжения<br> в частных домах</li>
+                                <li>Для систем водоснабжения в<br> многоквартирных домах</li>
+                            </nav>
+                            <span class="view_more">Открыть еще</span>
+                            <a class="ref_order_bordered" data-fancybox href="#modal_order"><button class="order_bordered">Заказать услугу</button></a>
+                        </div>
+                            <div class="card_column2">
+                                <span class="cost">от 50 000 руб</span>
+                                <img class="card_img" src="../practice/img/card2img.svg" alt="">
+                            </div>
+                    </div>
+                </div>
+                <div class="small_cards_row">
+                    <div class="card">
+                        <div class="card_column1">
+                            <h3 class="zag_card">Промывка систем<br> отопления</h3>
+                            <nav class="marked_list">
+                                <li>Качественно</li>
+                                <li>В день обращения</li>
+                                <li>В частных и многоквартирных<br> домах</li>
+                                <li>С помощью современного<br> немецкого оборудования</li>
+                            </nav>
+                            <span class="view_more">Открыть еще</span>
+                            <a class="ref_order_bordered" data-fancybox href="#modal_order"><button class="order_bordered">Заказать услугу</button></a>
+                        </div>
+                            <div class="card_column2">
+                                <span class="cost">от 50 000 руб</span>
+                                <img class="card_img" src="../practice/img/card3img.svg" alt="">
+                            </div>
+                    </div>
+                    <div class="card">
+                        <div class="card_column1">
+                            <h3 class="zag_card">Ремонт оборудования</h3>
+                            <nav class="marked_list">
+                                <li>Котлы</li>
+                                <li>Насосные станции</li>
+                                <li>Системы автоматики</li>
+                                <li>Иное оборудование</li>
+                            </nav>
+                            <a class="ref_order_bordered" data-fancybox href="#modal_order"><button class="order_bordered">Заказать услугу</button></a>
+                        </div>
+                            <div class="card_column2">
+                                <span class="cost">от 50 000 руб</span>
+                                <img class="card_img" src="../practice/img/card4img.svg" alt="">
+                            </div>
+                    </div>
+                </div>
+                        <div class="wide_card">
+                            <div class="card_column1">
+                                <h3 class="zag_card">Продажа оборудования</h3>
+                                <nav class="marked_list">
+                                    <li>Газовые котлы</li>
+                                    <li>Электрические котлы</li>
+                                    <li>Расходные материалы и комплектующие</li>
+                                </nav>
+                                <a class="ref_order_bordered" data-fancybox href="#modal_order"><button class="wide_order_bordered">Заказать услугу</button></a>
+                            </div>
+                                <div class="card_column2">
+                                    <span class="wide_cost">от 50 000 руб</span>
+                                    <img class="wide_card_img" src="../practice/img/widecardimg.svg" alt="">
+                                </div>
+                        </div>
+            </div>
+        </section>
+        
+        <!-- о компании -->
+        <section id="about">
+            <h2 class="zag_about">О <span class="about_blue_words">компании</span></h2>
+
+            <div class="about_main">
+                <div class="about_slider">
+                    <img src="../practice/img/sliderabout.svg" alt="">
+                    <img class="about_slider_buttons" src="../practice/img/aboutsliderbuttons.svg" alt="">
+                </div>
+                <div class="about_text">
+                    <div class="about_ps">
+                    <p class="about_p">Не каждый уделяет монтажу системы отопления достаточно внимания. Это приводит к отказам оборудования, проблемам с пуском в начале сезона и другим проблемам, которых можно избежать.</p>
+                    <p class="about_p">Составлением проекта, установкой и наладкой (всем, что связано с коммуникациями) должны заниматься исключительно профессионалы.</p>
+                    <p class="about_p">А проводить монтаж систем отопления квалифицированный персонал. Независимо от объекта.</p>
+                    <p class="about_p">Качественный монтаж, точно в срок. Мы исключили всех посредников, что бы предоставить одни из лучших цен. Квалифицированные славянские рабочие</p>
+                    </div>
+                    <div class="about_facts">
+                        <div class="about_fact"> 
+                            <span class="fact_number">1998</span>
+                            <span class="fact_txt">год основания компании</span>
+                        </div>
+                        <div class="about_fact">
+                            <span class="fact_number">12</span>
+                            <span class="fact_txt">квалифицированных инженеров в команде</span>
+                        </div>
+                        <div class="about_fact">
+                            <span class="fact_number">100</span>
+                            <span class="fact_txt">довольных клиентов</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- этапы работы с нами -->
+        <section id="stages">
+            <div class="big_blue">
+                <div class="stages_txt">
+                    <h2 class="zag_stages">Этапы работы с нами</h2>
+                    <img src="../practice/img/fourstagesimg.svg" alt="">
+                    <a data-fancybox href="#modal_order"><button class="order">Заказать услугу</button></a>
+                </div>
+                <div><img class="laptop_img" src="../practice/img/stagesimg.svg" alt=""></div>
+            </div>
+        </section>
+        
+
+        <!-- наша команда -->
+        <section id="team">
+            <div class="our_team">
+                <div class="place_for_zag_our_team">
+                    <h2 class="zag_our_team">Наша<br><span class="blue_word">команда</span></h2>
+                </div>
+                <div class="team_cards">
+
+                    <div class="team_card">
+                        <span class="card_fio">Зарубин Андрей Андреевич</span>
+                        <span class="card_prof">главный инженер</span>
+                        <img class="team_card_img" src="../practice/img/teamcard1.svg" alt="">
+                    </div>
+                    <div class="team_card">
+                        <span class="card_fio">Иванов Александр Викторович</span>
+                        <span class="card_prof">заместитель главного инженера</span>
+                        <img class="team_card_img" src="../practice/img/teamcard2.svg" alt="">
+                    </div>
+                    <div class="team_card">
+                        <span class="card_fio">Волков Валентин Иванович</span>
+                        <span class="card_prof">мастер-сметчик</span>
+                        <img class="team_card_img" src="../practice/img/teamcard3.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <span class="view_more_team">Показать всех</span>
+        </section> 
+        
+        <!-- отзывы клиентов   -->
+        <section id="reviews">
+            <h2 class="zag_reviews">Отзывы и благодарности<span class="blue_word"> клиентов</span></h2>
+            <div class="customers_reviews">
+                <div class="reviews_1row">
+                    <img src="../practice/img/videoreview.svg" alt="">
+                    <div class="reviews_txt">
+                        <div class="customer_info">
+                            <img src="../practice/img/customer1.svg" alt="">
+                            <div class="fio_project">
+                            <span class="fio">Александр Рыбаков</span>
+                            <span class="project">Проект: Отопление загородного дома “под ключ”</span>
+                            </div>
+                        </div>
+                        <div class="customer_citate">
+                            <span>«Компания выполнила работу на отличном уровне. Работники были профессиональны и внимательно относились к каждой детали. Результат работы полностью оправдал мои ожидания — теперь в доме очень комфортно и тепло. Спасибо за качественное выполнение услуги!»</span>
+                        </div>
+                        <div class="review_images">
+                            <img src="../practice/img/reviewimg1.svg" alt="">
+                            <img src="../practice/img/reviewimg2.svg" alt="">
+                            <img src="../practice/img/reviewimg3.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews_2row"><span class="review_name">ООО «Агрокомплекс», владелец компании Сармат Алиев</span><br><span class="review_project">Проект: Промышленная система теплохолодоснабжения</span></div>
+                <div class="reviews_3row"><img src="../practice/img/reviewsliderbtns.svg" alt=""></div>
+            </div>
+        </section>
+
+        <!-- выполненные работы -->
+        <section id="works">
+            <h2 class="zag_works">Выполненные <span class="blue_word">работы</span></h2>
+
+            <div class="done_works">
+                <div class="works_cards">
+                    <div class="work_card">
+                        <img src="../practice/img/workcard1.svg" alt="">
+                        <h3 class="work_h3">Система воздушного отопления с автоматизацией и диспетчеризацией</h3>
+                        <img class="work_tag1" src="../practice/img/tegsworks1.svg" alt="">
+                    </div>
+                    <div class="work_card">
+                        <img src="../practice/img/workcard2.svg" alt="">
+                        <h3 class="work_h3">Промышленная система теплохолодоснабжения (VRF системы, канальные электрические нагреватели)</h3>
+                        <img class="work_tag2" src="../practice/img/tegsworks2.svg" alt="">
+                    </div>
+                </div>
+                <img class="works_slider_buttons" src="../practice/img/reviewsliderbtns.svg" alt="">
+            </div>  
+
+        </section>
+
+        <!-- сертификаты качества  -->
+        <section id="certificates">
+
+            <h2 class="zag_certificates">Сертификаты <span class="blue_word">качества</span></h2>
+
+            <div class="quality_certificates">
+                <div class="certificates_list">
+                    <div class="choosen_list_item"><span class="cert_choosen_name">Сертификат официального дилера ZOTA</span><span class="cert_date">от 14 ноября 2019 года</span></div>
+                    <div class="list_item"><span class="cert_name">Сертификат официального дилера ТЕПЛОДАР</span><span class="cert_date">от 12 мая 2021 года</span></div>
+                    <div class="list_item"><span class="cert_name">Сертификат официального дилера СТЭН</span><span class="cert_date">от 2 апреля 2022</span></div>
+                    <div class="list_item"><span class="cert_name">Сертификат официального дилера ТЕПЛОДАР</span><span class="cert_date">от 2 апреля 2022</span></div>
+                    <div class="list_item"><span class="cert_name">Сертификат официального дилера СТЭН</span><span class="cert_date">от 2 апреля 2022</span></div>
+                    <div class="list_item"><span class="cert_name">Сертификат официального дилера ZOTA</span><span class="cert_date">от 2 апреля 2022</span></div>
+                    <span class="view_more_certificates">Показать еще</span>
+                </div>
+                <div class="certificates_img"><img src="../practice/img/certimg.svg" alt=""></div>
+            </div>
+
+        </section>
+
+        <!-- остались вопросы? -->
+         <section id="form">
+            <div class="big_blue2">
+                <div class="question_text">
+                    <h2>Остались вопросы?</h2>
+                    <span>Мы готовы ответить на любой их них, оставьте свои<br> данные и мы перезвоним</span>
+                    <img class="question_img" src="../practice/img/questionimg.svg" alt="">
+                </div>
+                <div class="question_form">
+                    <form action="">
+                        <label for="name">Имя</label>
+                        <input type="text" name="name">
+                        <label for="phone_number">Номер телефона*</label>
+                        <input type="text" name="phone_number" placeholder="+7 (___)___-__-__">
+                        <span>*Нажимая на кнопку, Вы соглашаетесь <br><span class="span_under">на обработку персональных данных</span></span>
+                        <button type="submit">Отправить</button>
+                    </form>
+                </div>
+            </div>
+         </section>
+
+         <!-- связаться с намии -->
+
+         <section id="contacts">
+            <h2 class="zag_contact"><span class="blue_word">Связаться</span> с нами</h2>
+
+            <div class="contact_us">
+                <div class="contact_block">
+                    <span class="back_info">[Телефон]</span>
+                    <div class="down_info">
+                        <span class="telephone">+7 (999) 123-45-67</span><br>
+                        <span class="grey_info">Пн-пт: с 8:00 до 17:00</span>
+                    </div>
+                </div>
+                <div class="contact_block">
+                    <span class="back_info">[Соцсети]</span>
+                    <div class="down_info">
+                        <img src="../practice/img/social.svg" alt=""><br>
+                        <span class="grey_info">В любое время</span>
+                    </div>
+                </div>
+                <div class="contact_block_adress">
+                    <span class="back_info">[Адрес]</span><div class="down_info">
+                        <span class="mos_obl">Московская область</span><br>
+                        <span class="adress">г. Видное, Бульвар Зеленые Аллеи,<br> д. 11</span><br>
+                        <span class="grey_info">Пн-пт: с 8:00 до 17:00</span></div></div>
+            </div>
+
+                    <!-- карта -->
+
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A09af574b4fd042cd7e81aef4a5d992e5bb1e544908548d01eb0fccb9ad0a1ca4&amp;source=constructor" width="100%" height="500" frameborder="0"></iframe>
+                    
+         </section> 
+    </main>
+
+                    <!-- подвал сайта  -->
+
+    <footer>
+
+        <div class="first_row">
+            <img class="footer_logo" src="../practice/img/footerlogo.svg" alt="">
+            <img class="footer_social" src="../practice/img/social.svg" alt="">
+            <a data-fancybox href="#modal_backcall"><button class="footer_backcall">Обратный звонок</button></a>
+        </div>
+        <div class="second_row">
+            <span class="first_in_2">Политика конфиденциальности</span>
+            <div class="second_in_2">
+                <span class="made_by">Сайт разработан</span>
+                <span class="grampus">GRAMPUS</span>
+            </div>
+            <span class="third_in_2">© 2024. ООО «Отопительное оборудование»</span>
+        </div>
+
+    </footer>
+        
+</body>
+
+</html>
